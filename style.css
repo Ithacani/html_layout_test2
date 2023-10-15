@@ -1,0 +1,222 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+.container {  
+    display: grid;
+    grid-template-columns: 0.6fr 1.4fr;
+    grid-template-rows: 0.4fr 2.5fr 0.1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header"
+      "input-column map-column"
+      "footer footer";
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .header {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 0.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header-banner"
+      "header-loading-bar";
+    grid-area: header;
+}
+  
+  .header-banner { 
+    grid-area: header-banner;
+    background-color: blueviolet;
+ }
+  
+  .header-loading-bar { 
+    grid-area: header-loading-bar; 
+    background-color: aqua;
+}
+  
+  .footer { 
+    grid-area: footer;
+    background-color: blueviolet;
+ }
+  
+  .map-column {  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1.4fr 1.3fr 0.3fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "map-container map-container"
+      "map-container map-container"
+      "timers timers";
+    grid-area: map-column;
+  }
+  
+  .timers {  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "start-time current-time"
+      "total-runtime last-updated";
+    grid-area: timers;
+    background-color: palegoldenrod
+  }
+  
+  .start-time { 
+    grid-area: start-time; 
+}
+  
+  .last-updated { 
+    grid-area: last-updated; 
+}
+  
+  .current-time { 
+    grid-area: current-time; 
+}
+  
+  .total-runtime { 
+    grid-area: total-runtime; 
+}
+  
+  .map-container { 
+    grid-area: map-container; 
+    border: solid;
+    border-color: red;
+}
+  
+  .input-column {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1.7fr 0.2fr 1.3fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "inputs inputs inputs"
+      "reset reset reset"
+      "modals modals modals";
+    grid-area: input-column;
+  }
+  
+  .inputs {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr /* 1fr */;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "input1 input1-text input1-submit"
+      "input2 input2-text input2-submit"
+      "input3 input3-text input3-submit"
+      "input4 input4-text input4-submit"
+      /* "input5 input5-text input5-submit" */;
+    grid-area: inputs;
+    background-color: lightblue
+  }
+  
+  .input1 { grid-area: input1; }
+  
+  .input1-text { grid-area: input1-text; }
+
+ .textBox {
+    margin-left: 5%;
+    width: 90%;
+    height: 80%;
+ }
+  
+ .submitButton {
+    margin-left: 5%;
+    width: 90%;
+    height: 90%;
+ }
+
+  .input1-submit { grid-area: input1-submit; }
+  
+  .input2 { grid-area: input2; }
+  
+  .input2-text { grid-area: input2-text; }
+  
+  .input2-submit { grid-area: input2-submit; }
+  
+  .input3 { grid-area: input3; }
+  
+  .input3-text { grid-area: input3-text; }
+  
+  .input3-submit { grid-area: input3-submit; }
+  
+  .input4 { grid-area: input4; }
+  
+  .input4-text { grid-area: input4-text; }
+  
+  .input4-submit { grid-area: input4-submit; }
+  
+/*   .input5 { grid-area: input5; }
+  
+  .input5-text { grid-area: input5-text; }
+  
+  .input5-submit { grid-area: input5-submit; } */
+  
+  .reset { 
+    grid-area: reset; 
+    background-color: lightcoral;
+}
+
+.resetButton {
+    width: 90%;
+    margin-top: 2%;
+    margin-left: 5%;
+}
+  
+  .modals {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "modal1 modal2 modal3"
+      "modal4 modal5 modal6"
+      "modal7 modal8 modal9"
+      "modal10 modal11 modal12"
+      "modal13 modal14 modal15";
+    grid-area: modals;
+    background-color: lightgreen;
+  }
+  
+  .modal1 { grid-area: modal1; }
+  
+  .modal2 { grid-area: modal2; }
+  
+  .modal3 { grid-area: modal3; }
+  
+  .modal4 { grid-area: modal4; }
+  
+  .modal5 { grid-area: modal5; }
+  
+  .modal6 { grid-area: modal6; }
+  
+  .modal7 { grid-area: modal7; }
+  
+  .modal8 { grid-area: modal8; }
+  
+  .modal9 { grid-area: modal9; }
+  
+  .modal10 { grid-area: modal10; }
+  
+  .modal11 { grid-area: modal11; }
+  
+  .modal12 { grid-area: modal12; }
+  
+  .modal13 { grid-area: modal13; }
+  
+  .modal14 { grid-area: modal14; }
+  
+  .modal15 { grid-area: modal15; }
+  

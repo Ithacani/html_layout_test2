@@ -36,9 +36,9 @@
         <div class="input3">input3</div>
         <div class="input3-text"><input class=textBox type="text"></div>
         <div class="input3-submit"><button class="submitButton">Submit</button></div>
-        <div class="input4">input4</div>
-        <div class="input4-text"><input class=textBox type="text"></div>
-        <div class="input4-submit"><button class="submitButton">Submit</button></div>
+        <div class="input4">Postcode Lookup</div>
+        <div class="input4-text"><input id="submittext4" class=textBox type="text"></div>
+        <div class="input4-submit"><button id="submitButton4" class="submitButton" onclick="postcodeLookup()">Zoom</button></div>
         <!-- <div class="input5">input5</div>
         <div class="input5-text"><input class=textBox type="text"></div>
         <div class="input5-submit"><button class="submitButton">Submit</button></div> -->
@@ -121,6 +121,15 @@
 
         function refreshPage() {
             window.location.reload(true)
+        }
+
+        async function postcodeLookup() {
+          postcode = document.getElementById("submittext4")
+          console.log(postcode.value)
+          
+          const response = await fetch ("https://api.postcodes.io/postcodes/"+postcode.value)
+          var latlong = await response.json();
+          console.log(latlong)
         }
 
     </script>

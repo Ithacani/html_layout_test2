@@ -94,7 +94,7 @@ html, body {
   
   .input-column {  
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 0.5fr 1fr 1fr;
     grid-template-rows: 1.7fr 0.2fr 1.3fr;
     gap: 0px 0px;
     grid-auto-flow: row;
@@ -107,7 +107,7 @@ html, body {
   
   .inputs {  
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 0.5fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr /* 1fr */;
     gap: 0px 0px;
     grid-auto-flow: row;
@@ -126,14 +126,14 @@ html, body {
   .input1-text { grid-area: input1-text; }
 
  .textBox {
-    margin-left: 5%;
+    margin: 2.5%;
     width: 90%;
     height: 80%;
  }
   
  .submitButton {
-    margin-left: 5%;
-    width: 90%;
+    margin: 2.5%;
+    width: 95%;
     height: 90%;
  }
 
